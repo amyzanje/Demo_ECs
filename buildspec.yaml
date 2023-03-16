@@ -5,15 +5,15 @@ phases:
     commands:
       - echo Logging in to Amazon ECR...
       - $(aws ecr get-login --no-include-email --region $AWS_DEFAULT_REGION)
-      - docker pull httpdimg:latest
+    
   build:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...
       - docker build -t httpdimg:latest .
-      - docker tag httpdimg:latest 564572526252.dkr.ecr.us-east-1.amazonaws.com/httpdimg:latest
+      - docker tag httpdimg:latest 564572526252.dkr.ecr.us-east-1.amazonaws.com/httpdimg
   post_build:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
-      - docker push 564572526252.dkr.ecr.us-east-1.amazonaws.com/httpdimg:latest
+      - docker push 564572526252.dkr.ecr.us-east-1.amazonaws.com/httpdimg
