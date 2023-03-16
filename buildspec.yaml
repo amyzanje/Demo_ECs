@@ -5,6 +5,7 @@ phases:
     commands:
       - echo Logging in to Amazon ECR...
       - $(aws ecr get-login --no-include-email --region $AWS_DEFAULT_REGION)
+      - REPOSITORY_URI=564572526252.dkr.ecr.us-east-1.amazonaws.com/httpdimg
     
   build:
     commands:
