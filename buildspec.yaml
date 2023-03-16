@@ -9,7 +9,7 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...
-      - docker build -t  web:1 .
+      - docker build -t  C1:1 .
       - docker tag C1:564572526252.dkr.ecr.us-east-1.amazonaws.com/httpdimg
   post_build:
     commands:
