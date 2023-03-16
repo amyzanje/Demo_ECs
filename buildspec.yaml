@@ -9,10 +9,10 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...
-      - docker build -t  C1:1 .
-      - docker tag C1:564572526252.dkr.ecr.us-east-1.amazonaws.com/httpdimg
+      - docker build -t  C1:  .
+      - docker tag C1:564572526252.dkr.ecr.us-east-1.amazonaws.com/httpdimg:latest
   post_build:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
-      - docker push 564572526252.dkr.ecr.us-east-1.amazonaws.com/httpdimg
+      - docker push 564572526252.dkr.ecr.us-east-1.amazonaws.com/httpdimg:latest
