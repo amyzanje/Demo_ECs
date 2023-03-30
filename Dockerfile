@@ -1,4 +1,4 @@
-FROM httpd
+FROM 564572526252.dkr.ecr.us-east-1.amazonaws.com/httpdimg
 
 # Install dependencies
 RUN apt-get update -y
